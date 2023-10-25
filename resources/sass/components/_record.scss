@@ -1,0 +1,41 @@
+.book-container {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 400px;
+}
+
+.book {
+    transform: rotateY(0deg);
+    position: relative;
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    transition: transform 1s ease;
+    // animation: 1s ease 0s 1 initAnimation;
+}
+
+.book:hover {
+    transform: rotateY(30deg);
+}
+
+@keyframes initAnimation {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(30deg);
+    }
+}
+
+.book > :first-child {
+    position: absolute;
+    background: #0d47a1aa;
+    width: 300px;
+    height: 300px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 20px #666;
+}
