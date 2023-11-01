@@ -3,14 +3,14 @@
 @section('content')
 <div class="container">
     <div class="d-flex flex-wrap">
-        @foreach ($recordsData['releases'] as $result)
+        @if ($recordData)
             <div class="book-container">
                 <div class="page">
-                    <a href="{{ '/records/'.$result['id'] }}" target="_self"></a>
-                    <img src="{{ $result['thumb'] }}"/>
+                    <a href="{{ $recordData['resource_url'] }}" target="_blank"></a>
+                    <img src="{{ $recordData['images'][0]['uri'] }}"/>
                 </div>
             </div>
-        @endforeach
+        @endif
     </div>
 </div>
 @endsection

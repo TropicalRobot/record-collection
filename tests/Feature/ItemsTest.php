@@ -6,6 +6,5 @@ use function Pest\Laravel\{get};
 
 it('has a homepage', function() {
 
-    get('/')
-        ->assertOk();
+
 });

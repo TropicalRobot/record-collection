@@ -20,13 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Http::macro('discogs', function () {
-            $apiKey = env('DISCOGS_API_KEY');
-            $apiSecret = env('DISCOGS_API_SECRET');
-
-            return Http::withHeaders([
-                'Authorization' => "Discogs key={$apiKey}, secret={$apiSecret}"
-            ])->baseUrl('https://api.discogs.com/database');
-        });
+        //
     }
 }
